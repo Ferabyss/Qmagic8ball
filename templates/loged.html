@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+      <br>
+        <h1>Usuarios registrados:</h1>
+        <ul>
+          {% for friend in friends %}
+          <li><a>{{friend.email}}</a></li>
+          {% endfor %}
+        </ul>
+        </p>
+    </div>
+{% endblock %}

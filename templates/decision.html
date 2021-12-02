@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+      <br>
+      <div class="container">
+          <h1>Quantum Magic 8 Ball!</h1>
+      {% if error %}
+      <div class="alert alert-dismissible alert-primary fade show" role="alert">
+        <strong>La bola mágica dice: </strong> {{error}}
+        <button type = "button" class = "btn-close" data-bs-dismiss = "alert" aria-label = "Close">
+          <span aria-hidden="true"> </span>
+        </button>
+      </div>
+      {% endif %}
+      <form action="/send" method = "POST" >
+      <div class="form-group">
+        <label for="Input1" class="form-label"> Mi pregunta </label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" name= "salida">
+      <div> 
+      </div>
+      </div>
+      <br>
+      <button type="submit" class="btn morado">Preguntar</button>
+      </form> 
+{% endblock %}

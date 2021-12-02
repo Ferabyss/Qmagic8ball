@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="static/signin.css" rel="stylesheet">
+  </head>
+  <body class="text-center">
+    
+<main class="form-signin">
+  <form action="/signup" METHOD="POST">
+    {{ form.csrf_token }}
+    {{ form.name }}
+    <a href="/"><img class="mb-4" src="https://i.ibb.co/SxQK7bL/puzzle.png" width="auto" height="57" alt="Logo" /></a> <!-- logo del sitio -->
+    <h1 class="h3 mb-3 fw-normal text-white ">QHelper Sign-up</h1>
+
+    <div class="form-floating">
+      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name = "email">
+      <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
+      <label for="floatingPassword">Password</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password" aria-hidden="true" name="ibmid">
+      <label for="floatingPassword">IBMQ Token</label>
+    </div>
+    <div class="checkbox mb-3">
+      <label class = "text-white">
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    <input class="w-100 btn btn-lg btn-primary" type="submit">Sign up</input>
+    <p class="mt-5 mb-3 text-muted">&copy; 2021 || <a href="/login" >Login</a> || <a href="https://quantum-computing.ibm.com/account" >IBMQ Token</p>
+  </form>
+</main>
+
+
+    
+  </body>
+</html>
